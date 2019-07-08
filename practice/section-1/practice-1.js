@@ -2,12 +2,10 @@
 
 function collectSameElements(collectionA, collectionB) {
   var collectionC = [];
-  for(var i = 0; i<collectionB.length; i++) {
-    for (var j = 0; j<collectionA.length; j++) {
-      if(collectionA[j] == collectionB[i]) {
-          collectionC.push(collectionA[i]);
-    }
-    }
+  for(var i = 0; i<collectionA.length; i++) {
+		if (collectionB.indexOf(collectionA[i]) >= 0 && collectionC.indexOf(collectionA[i]) < 0) {
+			collectionC.push(collectionA[i]);
+		}
   }
   return collectionC;
 }
